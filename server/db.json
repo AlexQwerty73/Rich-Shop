@@ -1,0 +1,293 @@
+{
+  "rich-humans": [
+    {
+      "id": "elon_musk",
+      "name": "Elon",
+      "surname": "Musk",
+      "age": 51,
+      "wealth": 300000000000,
+      "bio": "Entrepreneur, founder of Tesla, SpaceX, Neuralink and The Boring Company.",
+      "photo": "elon_musk.jpg",
+      "companies": [
+        {
+          "name": "Tesla",
+          "value": 800000000000
+        },
+        {
+          "name": "SpaceX",
+          "value": 100000000000
+        }
+      ],
+      "residence": "Texas, USA"
+    },
+    {
+      "id": "jeff_bezos",
+      "name": "Jeff",
+      "surname": "Bezos",
+      "age": 59,
+      "wealth": 150000000000,
+      "bio": "Founder of Amazon, the world's largest e-commerce company.",
+      "photo": "jeff_bezos.jpg",
+      "companies": [
+        {
+          "name": "Amazon",
+          "value": 1400000000000
+        },
+        {
+          "name": "Blue Origin",
+          "value": 7000000000
+        }
+      ],
+      "residence": "Washington, USA"
+    },
+    {
+      "id": "bill_gates",
+      "name": "Bill",
+      "surname": "Gates",
+      "age": 67,
+      "wealth": 130000000000,
+      "bio": "Co-founder of Microsoft, philanthropist through the Bill & Melinda Gates Foundation.",
+      "photo": "bill_gates.jpg",
+      "companies": [
+        {
+          "name": "Microsoft",
+          "value": 2000000000000
+        }
+      ],
+      "residence": "Washington, USA"
+    },
+    {
+      "id": "warren_buffett",
+      "name": "Warren",
+      "surname": "Buffett",
+      "age": 92,
+      "wealth": 120000000000,
+      "bio": "CEO of Berkshire Hathaway, known as the 'Oracle of Omaha' for his investment strategies.",
+      "photo": "warren_buffett.jpg",
+      "companies": [
+        {
+          "name": "Berkshire Hathaway",
+          "value": 700000000000
+        }
+      ],
+      "residence": "Nebraska, USA"
+    },
+    {
+      "id": "mark_zuckerberg",
+      "name": "Mark",
+      "surname": "Zuckerberg",
+      "age": 39,
+      "wealth": 110000000000,
+      "bio": "Co-founder and CEO of Facebook (now Meta Platforms).",
+      "photo": "mark_zuckerberg.jpg",
+      "companies": [
+        {
+          "name": "Meta Platforms",
+          "value": 800000000000
+        }
+      ],
+      "residence": "California, USA"
+    },
+    {
+      "id": "bernard_arnault",
+      "name": "Bernard",
+      "surname": "Arnault",
+      "age": 74,
+      "wealth": 200000000000,
+      "bio": "Chairman and CEO of LVMH, the world's largest luxury goods company.",
+      "photo": "bernard_arnault.jpg",
+      "companies": [
+        {
+          "name": "LVMH",
+          "value": 400000000000
+        }
+      ],
+      "residence": "Paris, France"
+    },
+    {
+      "id": "larry_ellison",
+      "name": "Larry",
+      "surname": "Ellison",
+      "age": 78,
+      "wealth": 140000000000,
+      "bio": "Co-founder and CTO of Oracle Corporation.",
+      "photo": "larry_ellison.jpg",
+      "companies": [
+        {
+          "name": "Oracle",
+          "value": 300000000000
+        }
+      ],
+      "residence": "Hawaii, USA"
+    },
+    {
+      "id": "larry_page",
+      "name": "Larry",
+      "surname": "Page",
+      "age": 50,
+      "wealth": 120000000000,
+      "bio": "Co-founder of Google and Alphabet Inc.",
+      "photo": "larry_page.jpg",
+      "companies": [
+        {
+          "name": "Alphabet",
+          "value": 1500000000000
+        }
+      ],
+      "residence": "California, USA"
+    },
+    {
+      "id": "sergey_brin",
+      "name": "Sergey",
+      "surname": "Brin",
+      "age": 50,
+      "wealth": 120000000000,
+      "bio": "Co-founder of Google and Alphabet Inc.",
+      "photo": "sergey_brin.jpg",
+      "companies": [
+        {
+          "name": "Alphabet",
+          "value": 1500000000000
+        }
+      ],
+      "residence": "California, USA"
+    },
+    {
+      "id": "mukesh_ambani",
+      "name": "Mukesh",
+      "surname": "Ambani",
+      "age": 66,
+      "wealth": 100000000000,
+      "bio": "Chairman of Reliance Industries, India's most valuable company.",
+      "photo": "mukesh_ambani.jpg",
+      "companies": [
+        {
+          "name": "Reliance Industries",
+          "value": 200000000000
+        }
+      ],
+      "residence": "Mumbai, India"
+    }
+  ],
+  "products": [
+    {
+      "id": "ferrari_sf90",
+      "name": "Ferrari SF90 Stradale",
+      "description": "Hybrid supercar with 1000 HP",
+      "price": 625000
+    },
+    {
+      "id": "private_island",
+      "name": "Private Island",
+      "description": "50-acre tropical paradise",
+      "price": 50000000
+    },
+    {
+      "id": "mega_yacht",
+      "name": "Luxury Mega Yacht",
+      "description": "150m yacht with helipad and submarine",
+      "price": 300000000
+    },
+    {
+      "id": "penthouse_nyc",
+      "name": "NYC Penthouse",
+      "description": "10-bedroom penthouse in Manhattan",
+      "price": 25000000
+    },
+    {
+      "id": "rolex_daytona",
+      "name": "Rolex Daytona",
+      "description": "Platinum anniversary edition",
+      "price": 75000
+    },
+    {
+      "id": "private_jet",
+      "name": "G700 Private Jet",
+      "description": "Gulfstream G700 long-range jet",
+      "price": 75000000
+    },{
+      "id": "mona_lisa",
+      "name": "Mona Lisa (Replica Rights)",
+      "description": "Official licensed replica for private display",
+      "price": 45000000
+    },
+    {
+      "id": "tutankhamun_mask",
+      "name": "Tutankhamun's Golden Mask",
+      "description": "Museum-quality reproduction, 24k gold",
+      "price": 12500000
+    },{
+      "id": "space_vacation",
+      "name": "Orbital Space Vacation",
+      "description": "7-day trip with Moon panorama view",
+      "price": 55000000
+    },
+    {
+      "id": "volcano_dinner",
+      "name": "Active Volcano Dinner",
+      "description": "Private helicopter tour with 3-Michelin star meal",
+      "price": 2500000
+    },{
+      "id": "underwater_villa",
+      "name": "Underwater Residence",
+      "description": "5-bedroom villa with coral reef views",
+      "price": 120000000
+    },
+    {
+      "id": "castle_scotland",
+      "name": "15th Century Scottish Castle",
+      "description": "Full restoration included, ghost-free guarantee",
+      "price": 65000000
+    },{
+      "id": "hologram_butler",
+      "name": "AI Hologram Butler",
+      "description": "Lifelike assistant with quantum computing",
+      "price": 2500000
+    },
+    {
+      "id": "cyber_yacht",
+      "name": "Neon Cyber Yacht",
+      "description": "Glowing hull with drone swarm escort",
+      "price": 99000000
+    },{
+      "id": "time_capsule",
+      "name": "Millennium Time Capsule",
+      "description": "Global monument for your legacy",
+      "price": 80000000
+    },
+    {
+      "id": "celebrity_duet",
+      "name": "Duet with Music Superstar",
+      "description": "Private concert + platinum record production",
+      "price": 35000000
+    },{
+      "id": "dragon_egg",
+      "name": "Jurassic Dinosaur Egg",
+      "description": "Certified T-Rex embryo in amber",
+      "price": 75000000
+    },
+    {
+      "id": "unicorn_license",
+      "name": "Unicorn Ownership License",
+      "description": "Mythical creature breeding rights",
+      "price": 999999999
+    },{
+      "id": "nano_island",
+      "name": "Floating Nano-Island",
+      "description": "Self-sustaining eco-platform with AI climate control",
+      "price": 450000000
+    },
+    {
+      "id": "eternity_vine",
+      "name": "Immortality Wine Collection",
+      "description": "1000-year aged wine from lost vineyard",
+      "price": 2500000
+    },
+    {
+      "id": "sports_team",
+      "name": "Premier League Football Club",
+      "description": "Complete franchise ownership package",
+      "price": 4500000000
+    }
+  ]
+}

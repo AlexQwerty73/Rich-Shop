@@ -1,0 +1,205 @@
+/* HeroSection.module.css */
+.hero {
+  padding: 11rem 0 10rem;
+  background: linear-gradient(15deg, #374709 0%, #212517 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(
+    45deg,
+    transparent 0%,
+    rgba(222, 211, 166, 0.05) 50%,
+    transparent 100%
+  );
+  animation: glow 20s infinite linear;
+}
+
+@keyframes glow {
+  0% { transform: rotate(0deg) translateX(-50%); }
+  100% { transform: rotate(360deg) translateX(-50%); }
+}
+
+.heroContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.textBlock {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s forwards;
+  animation-delay: 0.3s;
+}
+
+.title {
+  font-size: 4.5rem;
+  color: #F2F2EF;
+  margin-bottom: 2rem;
+  line-height: 1.1;
+  position: relative;
+}
+
+.highlight {
+  color: #DED3A6;
+  position: relative;
+  display: inline-block;
+}
+
+.highlight::after {
+  content: '';
+  position: absolute;
+  bottom: 8px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: #759242;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.6s ease;
+}
+
+.title:hover .highlight::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.subtitle {
+  font-size: 1.8rem;
+  color: rgba(242, 242, 239, 0.9);
+  margin-bottom: 3rem;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  background: #DED3A6;
+  color: #212517;
+  padding: 1.5rem 3rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.ctaButton::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent 0%,
+    rgba(255,255,255,0.1) 50%,
+    transparent 100%
+  );
+  animation: buttonGlow 6s infinite linear;
+}
+
+.ctaButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.ctaButton span {
+  position: relative;
+  z-index: 1;
+}
+
+.heroImage {
+  opacity: 0;
+  transform: translateX(50px);
+  animation: fadeInRight 0.8s forwards;
+  animation-delay: 0.5s;
+  filter: drop-shadow(0 20px 30px rgba(0,0,0,0.3));
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.heroImage::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    45deg,
+    rgba(222, 211, 166, 0.1) 0%,
+    rgba(222, 211, 166, 0.05) 50%,
+    transparent 100%
+  );
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes buttonGlow {
+  0% { transform: rotate(0deg) translate(-50%, -50%); }
+  100% { transform: rotate(360deg) translate(-50%, -50%); }
+}
+
+@media (max-width: 1024px) {
+  .heroContent {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 4rem;
+  }
+  
+  .title {
+    font-size: 3.5rem;
+  }
+  
+  .subtitle {
+    margin: 0 auto 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 6rem 0;
+  }
+  
+  .title {
+    font-size: 2.8rem;
+  }
+  
+  .subtitle {
+    font-size: 1.4rem;
+  }
+  
+  .ctaButton {
+    padding: 1.2rem 2rem;
+    font-size: 1rem;
+  }
+}

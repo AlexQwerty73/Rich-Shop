@@ -1,0 +1,60 @@
+.richList {
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+   gap: 2rem;
+   padding: 0 1rem;
+ }
+ 
+ .richListItem {
+  list-style: none;
+   background: white;
+   border-radius: 15px;
+   padding: 1.5rem;
+   transition: all 0.3s ease;
+   cursor: pointer;
+   border: 1px solid rgba(222, 211, 166, 0.3);
+   box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+ }
+ 
+ .richListItem:hover {
+   transform: translateY(-5px);
+   box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+ }
+ 
+ .cardLink {
+   text-decoration: none;
+   display: block;
+   color: inherit;
+ }
+ 
+ .richListContent {
+   padding: 1rem;
+ }
+ 
+ .richListName {
+   color: #212517;
+   font-size: 1.4rem;
+   margin-bottom: 0.5rem;
+ }
+ 
+ .richListAge {
+   color: #759242;
+   font-size: 0.9rem;
+   margin-bottom: 0.5rem;
+ }
+ 
+ .richListWealth {
+   color: #374709;
+   font-size: 1.2rem;
+   font-weight: 600;
+ }
+ 
+ @media (max-width: 768px) {
+   .richList {
+     grid-template-columns: 1fr;
+   }
+   
+   .richListItem {
+     margin: 0 0.5rem;
+   }
+ }

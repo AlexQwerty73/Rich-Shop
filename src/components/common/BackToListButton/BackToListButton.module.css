@@ -1,0 +1,34 @@
+.button {
+   display: inline-flex;
+   align-items: center;
+   gap: 0.8rem;
+   background: transparent;
+   border: none;
+   cursor: pointer;
+   color: #759242;
+   font-size: 1rem;
+   font-weight: 500;
+   padding: 0.5rem 1rem;
+   border-radius: 8px;
+   transition: all 0.3s ease;
+ }
+ 
+ .button:hover {
+   background: rgba(222, 211, 166, 0.1);
+   color: #374709;
+   transform: translateX(-5px);
+ }
+ 
+ .icon {
+   width: 1.2rem;
+   height: 1.2rem;
+   transition: transform 0.3s ease;
+ }
+ 
+ .button:hover .icon {
+   transform: translateX(-3px);
+ }
+ 
+ .text {
+   margin-top: 2px;
+ }

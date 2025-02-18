@@ -1,0 +1,34 @@
+.wrapper {
+   background: #F2F2EF;
+   min-height: 100vh;
+   padding-top: 90px; /* Компенсация высоты хедера */
+ }
+ 
+ .content {
+   padding: 2rem 1rem;
+   max-width: 1200px;
+   margin: 0 auto;
+ }
+ 
+ .h1 {
+   text-align: center;
+   color: #374709;
+   font-size: 2.5rem;
+   margin-bottom: 3rem;
+   text-shadow: 0 2px 4px rgba(0,0,0,0.05);
+ }
+ 
+ .loading,
+ .error {
+   text-align: center;
+   font-size: 1.5rem;
+   color: #759242;
+   padding: 4rem 0;
+ }
+ 
+ @media (max-width: 768px) {
+   .h1 {
+     font-size: 2rem;
+     padding: 0 1rem;
+   }
+ }

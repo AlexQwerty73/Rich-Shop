@@ -1,0 +1,152 @@
+.profile {
+  margin-top: 90px;
+  background: #F2F2EF;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.header {
+  text-align: center;
+  border-bottom: 2px solid #DED3A6;
+  position: relative;
+  text-align: center;
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+}
+
+.backButton {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.title {
+  color: #212517;
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.age {
+  color: #759242;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.wealthContainer {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 1rem;
+  background: rgba(222, 211, 166, 0.1);
+  padding: 1rem 2rem;
+  border-radius: 50px;
+}
+
+.wealthLabel {
+  color: #374709;
+  font-size: 1.1rem;
+}
+
+.wealth {
+  color: #759242;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.details {
+  display: grid;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.section {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  border: 1px solid rgba(222, 211, 166, 0.2);
+}
+
+.sectionTitle {
+  color: #212517;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #DED3A6;
+}
+
+.bio {
+  color: #374709;
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+.companiesList {
+  display: grid;
+  gap: 1rem;
+}
+
+.companyItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: rgba(242, 242, 239, 0.8);
+  border-radius: 10px;
+}
+
+.companyName {
+  color: #212517;
+  font-weight: 500;
+}
+
+.companyValue {
+  color: #759242;
+  font-weight: 600;
+}
+
+.residence {
+  color: #374709;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.spendButton {
+  display: block;
+  width: fit-content;
+  margin: 2rem auto 0;
+  padding: 1.2rem 3rem;
+  background: #759242;
+  color: #F2F2EF;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  font-size: 1.1rem;
+}
+
+.spendButton:hover {
+  background: #374709;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(117, 146, 66, 0.3);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.2rem;
+  }
+  
+  .wealth {
+    font-size: 1.5rem;
+  }
+  
+  .section {
+    padding: 1.5rem;
+  }
+  
+  .spendButton {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
+}

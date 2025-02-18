@@ -1,0 +1,11 @@
+.wrapper {
+  background: #F2F2EF;
+  overflow-x: hidden;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

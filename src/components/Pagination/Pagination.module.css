@@ -1,0 +1,76 @@
+.pagination {
+   display: flex;
+   justify-content: center;
+   gap: 0.8rem;
+   margin: 3rem 0;
+   flex-wrap: wrap;
+ }
+ 
+ .pageItem {
+   padding: 0.6rem 1.2rem;
+   border: 2px solid #DED3A6;
+   border-radius: 6px;
+   text-decoration: none;
+   color: #374709;
+   font-weight: 500;
+   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+   background: #F2F2EF;
+ }
+ 
+ .pageItem:hover {
+   background: #759242;
+   color: #F2F2EF;
+   transform: translateY(-2px);
+   border-color: #374709;
+ }
+ 
+ .active {
+   background: #DED3A6;
+   color: #212517;
+   font-weight: 600;
+   border-color: #759242;
+   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+ }
+ /* Добавить в существующие стили */
+.productsGrid {
+   min-height: 60vh;
+ }
+ 
+ .noResults {
+   text-align: center;
+   padding: 3rem;
+   color: #759242;
+   font-size: 1.2rem;
+   grid-column: 1 / -1;
+ }
+ 
+ .searchContainer {
+   margin-bottom: 2rem;
+   position: relative;
+ }
+ 
+ .searchInput {
+   width: 100%;
+   padding: 1rem 2rem;
+   border: 2px solid #DED3A6;
+   border-radius: 50px;
+   font-size: 1.1rem;
+   transition: all 0.3s ease;
+ }
+ 
+ .searchInput:focus {
+   outline: none;
+   border-color: #759242;
+   box-shadow: 0 4px 6px rgba(116, 146, 66, 0.1);
+ }
+ 
+ @media (max-width: 768px) {
+   .pagination {
+     gap: 0.5rem;
+   }
+   
+   .pageItem {
+     padding: 0.5rem 1rem;
+     font-size: 0.9rem;
+   }
+ }
