@@ -15,96 +15,118 @@ const formatCurrency = (value) => {
 export const PageStore = () => {
   const { personId, page = 1 } = useParams();
   const navigate = useNavigate();
+  
+  // Получаем данные из API
   const { data: richPeople = [] } = useGetRichHumansQuery(personId);
   const { data: products = [], isLoading } = useGetProductsQuery();
 
+  // Состояния компонента
   const [searchQuery, setSearchQuery] = useState('');
   const [purchases, setPurchases] = useState({});
-  const [quantities, setQuantities] = useState({});
   const [isPurchasesOpen, setIsPurchasesOpen] = useState(false);
   const [animationKey, setAnimationKey] = useState(0);
 
+  // Данные о выбранном человеке
   const richPerson = richPeople[0] || {};
   const initialWealth = Number(richPerson.wealth) || 0;
+
+  // Конфигурация пагинации
   const ITEMS_PER_PAGE = 9;
   const currentPage = Number(page);
 
-  // Расчет баланса с защитой от отрицательных значений
+  /* 
+    Расчет текущего баланса:
+    - Суммируем все текущие покупки
+    - Вычитаем из начального капитала
+    - Гарантируем неотрицательное значение
+  */
   const totalSpent = Object.values(purchases).reduce(
-    (sum, { quantity, price }) => sum + (Number(quantity) * Number(price)),
+    (sum, { quantity, price }) => sum + (quantity * price),
     0
   );
   const currentBalance = Math.max(initialWealth - totalSpent, 0);
 
+  // Анимация при изменении баланса
   useEffect(() => {
     setAnimationKey(prev => prev + 1);
   }, [currentBalance]);
 
-  // расчет максимального количества
-  const getMaxQuantity = (price) => {
-    const numericPrice = Number(price);
-    return numericPrice > 0 ? Math.floor(currentBalance / numericPrice) : 0;
+  /* 
+    Расчет максимального количества для товара:
+    1. Рассчитываем доступный баланс БЕЗ текущего товара
+    2. Добавляем обратно стоимость уже выбранного количества
+    3. Делим на цену товара
+  */
+  const getMaxQuantity = (productId, productPrice) => {
+    const currentQty = purchases[productId]?.quantity || 0;
+    const price = Number(productPrice);
+    
+    if (price <= 0) return 0;
+    
+    // Доступные средства с учетом уже выбранного количества
+    const availableBalance = currentBalance + (currentQty * price);
+    return Math.floor(availableBalance / price);
   };
 
-  const handleQuantityChange = (productId, newQuantity, price) => {
-    const numericPrice = Number(price);
-    const maxQuantity = getMaxQuantity(numericPrice);
+  // Обработчик изменения количества
+  const handleQuantityChange = (productId, newQuantity, productPrice) => {
+    const price = Number(productPrice);
+    const maxQty = getMaxQuantity(productId, price);
     
-    let quantity = Math.max(Number(newQuantity), 0);
-    quantity = Math.min(quantity, maxQuantity);
+    // Корректируем введенное значение
+    let quantity = Math.max(0, Math.min(
+      Number(newQuantity),
+      maxQty
+    ));
 
-    console.log( numericPrice, maxQuantity, quantity);
-    // Принудительная коррекция при превышении
-    if (quantity > maxQuantity) {
-      quantity = maxQuantity;
-    }
-
-    setQuantities(prev => ({ 
-      ...prev, 
-      [productId]: quantity 
-    }));
-    console.log(quantities);
-    
-
+    // Обновляем состояние покупок
     setPurchases(prev => {
       const updated = { ...prev };
+      
       if (quantity > 0) {
         updated[productId] = {
           quantity,
-          price: numericPrice,
+          price,
           name: products.find(p => p.id === productId)?.name || ''
         };
       } else {
         delete updated[productId];
       }
+      
       return updated;
     });
   };
 
+  // Обработчик удаления товара
   const handleRemove = (productId) => {
-    handleQuantityChange(productId, 0, purchases[productId].price);
+    handleQuantityChange(productId, 0, 0);
   };
 
+  // Фильтрация и пагинация товаров
   const filteredProducts = products.filter(product =>
     product.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
-
   const totalPages = Math.ceil(filteredProducts.length / ITEMS_PER_PAGE);
-  const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
-  const paginatedProducts = filteredProducts.slice(startIndex, startIndex + ITEMS_PER_PAGE);
+  const paginatedProducts = filteredProducts.slice(
+    (currentPage - 1) * ITEMS_PER_PAGE,
+    currentPage * ITEMS_PER_PAGE
+  );
 
+  // Смена страницы
   const handlePageChange = (newPage) => {
     navigate(`/spend/${personId}/${newPage}`);
   };
 
   return (
     <div className={s.wrapper}>
+      {/* Шапка с кнопкой возврата */}
       <Container>
         <div className={s.header}>
           <BackButton />
         </div>
       </Container>
 
+      {/* Верхняя панель с балансом и покупками */}
       <div className={s.topPanel}>
         <Container>
           <div className={s.balanceContainer}>
@@ -148,6 +170,7 @@ export const PageStore = () => {
         </Container>
       </div>
 
+      {/* Основной контент */}
       <Container>
         <div className={s.searchContainer}>
           <input
@@ -167,12 +190,13 @@ export const PageStore = () => {
             <div className={s.loading}>Loading products...</div>
           ) : paginatedProducts.length > 0 ? (
             paginatedProducts.map(product => {
+              const productId = product.id;
               const productPrice = Number(product.price);
-              const currentQuantity = quantities[product.id] || 0;
-              const maxQuantity = getMaxQuantity(productPrice);
+              const currentQty = purchases[productId]?.quantity || 0;
+              const maxQty = getMaxQuantity(productId, productPrice);
 
               return (
-                <div key={product.id} className={s.productCard}>
+                <div key={productId} className={s.productCard}>
                   <h3 className={s.productName}>{product.name}</h3>
                   <p className={s.productDescription}>{product.description}</p>
                   <div className={s.productFooter}>
@@ -183,37 +207,33 @@ export const PageStore = () => {
                       <button
                         className={s.quantityButton}
                         onClick={() => handleQuantityChange(
-                          product.id, 
-                          currentQuantity - 1, 
+                          productId, 
+                          currentQty - 1, 
                           productPrice
                         )}
-                        disabled={currentQuantity <= 0}
+                        disabled={currentQty <= 0}
                       >
                         -
                       </button>
                       <input
                         type="number"
+                        value={currentQty}
                         min="0"
-                        max={maxQuantity}
-                        value={currentQuantity}
+                        max={maxQty}
                         onChange={(e) => {
-                          const value = Math.floor(Number(e.target.value));
-                          handleQuantityChange(
-                            product.id,
-                            !isNaN(value) ? value : 0,
-                            productPrice
-                          );
+                          const value = Math.max(0, parseInt(e.target.value) || 0);
+                          handleQuantityChange(productId, value, productPrice);
                         }}
                         className={s.quantityInput}
                       />
                       <button
                         className={s.quantityButton}
                         onClick={() => handleQuantityChange(
-                          product.id, 
-                          currentQuantity + 1, 
+                          productId, 
+                          currentQty + 1, 
                           productPrice
                         )}
-                        disabled={currentQuantity >= maxQuantity}
+                        disabled={currentQty >= maxQty}
                       >
                         +
                       </button>
@@ -237,4 +257,4 @@ export const PageStore = () => {
       </Container>
     </div>
   );
-};
+};  
