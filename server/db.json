@@ -1,21 +1,41 @@
 {
   "rich-humans": [
     {
+      "id": "bernard_arnault",
+      "name": "Bernard",
+      "surname": "Arnault", 
+      "age": 74,
+      "wealth": 214000000000,
+      "bio": "Chairman and CEO of LVMH, the world's largest luxury goods company.",
+      "photo": "bernard_arnault.jpg",
+      "companies": [
+        {
+          "name": "LVMH",
+          "value": 440000000000
+        }
+      ],
+      "residence": "Paris, France"
+    },
+    {
       "id": "elon_musk",
       "name": "Elon",
       "surname": "Musk",
-      "age": 51,
-      "wealth": 300000000000,
-      "bio": "Entrepreneur, founder of Tesla, SpaceX, Neuralink and The Boring Company.",
+      "age": 52,
+      "wealth": 195000000000, 
+      "bio": "CEO of Tesla and SpaceX, owner of X (formerly Twitter).",
       "photo": "elon_musk.jpg",
       "companies": [
         {
           "name": "Tesla",
-          "value": 800000000000
+          "value": 880000000000
         },
         {
           "name": "SpaceX",
-          "value": 100000000000
+          "value": 180000000000
+        },
+        {
+          "name": "X",
+          "value": 15000000000
         }
       ],
       "residence": "Texas, USA"
@@ -24,114 +44,98 @@
       "id": "jeff_bezos",
       "name": "Jeff",
       "surname": "Bezos",
-      "age": 59,
-      "wealth": 150000000000,
-      "bio": "Founder of Amazon, the world's largest e-commerce company.",
-      "photo": "jeff_bezos.jpg",
+      "age": 60,
+      "wealth": 185000000000,
+      "bio": "Founder and Executive Chairman of Amazon, owner of Blue Origin.",
+      "photo": "jeff_bezos.jpg", 
       "companies": [
         {
           "name": "Amazon",
-          "value": 1400000000000
+          "value": 1700000000000
         },
         {
           "name": "Blue Origin",
-          "value": 7000000000
+          "value": 15000000000
         }
       ],
       "residence": "Washington, USA"
-    },
-    {
-      "id": "bill_gates",
-      "name": "Bill",
-      "surname": "Gates",
-      "age": 67,
-      "wealth": 130000000000,
-      "bio": "Co-founder of Microsoft, philanthropist through the Bill & Melinda Gates Foundation.",
-      "photo": "bill_gates.jpg",
-      "companies": [
-        {
-          "name": "Microsoft",
-          "value": 2000000000000
-        }
-      ],
-      "residence": "Washington, USA"
-    },
-    {
-      "id": "warren_buffett",
-      "name": "Warren",
-      "surname": "Buffett",
-      "age": 92,
-      "wealth": 120000000000,
-      "bio": "CEO of Berkshire Hathaway, known as the 'Oracle of Omaha' for his investment strategies.",
-      "photo": "warren_buffett.jpg",
-      "companies": [
-        {
-          "name": "Berkshire Hathaway",
-          "value": 700000000000
-        }
-      ],
-      "residence": "Nebraska, USA"
-    },
-    {
-      "id": "mark_zuckerberg",
-      "name": "Mark",
-      "surname": "Zuckerberg",
-      "age": 39,
-      "wealth": 110000000000,
-      "bio": "Co-founder and CEO of Facebook (now Meta Platforms).",
-      "photo": "mark_zuckerberg.jpg",
-      "companies": [
-        {
-          "name": "Meta Platforms",
-          "value": 800000000000
-        }
-      ],
-      "residence": "California, USA"
-    },
-    {
-      "id": "bernard_arnault",
-      "name": "Bernard",
-      "surname": "Arnault",
-      "age": 74,
-      "wealth": 200000000000,
-      "bio": "Chairman and CEO of LVMH, the world's largest luxury goods company.",
-      "photo": "bernard_arnault.jpg",
-      "companies": [
-        {
-          "name": "LVMH",
-          "value": 400000000000
-        }
-      ],
-      "residence": "Paris, France"
     },
     {
       "id": "larry_ellison",
       "name": "Larry",
       "surname": "Ellison",
-      "age": 78,
-      "wealth": 140000000000,
-      "bio": "Co-founder and CTO of Oracle Corporation.",
+      "age": 79,
+      "wealth": 142000000000,
+      "bio": "Co-founder, CTO and Executive Chairman of Oracle Corporation.",
       "photo": "larry_ellison.jpg",
       "companies": [
         {
           "name": "Oracle",
-          "value": 300000000000
+          "value": 330000000000
         }
       ],
       "residence": "Hawaii, USA"
+    },
+    {
+      "id": "warren_buffett", 
+      "name": "Warren",
+      "surname": "Buffett",
+      "age": 93,
+      "wealth": 128000000000,
+      "bio": "CEO of Berkshire Hathaway, legendary investor known as the 'Oracle of Omaha'.",
+      "photo": "warren_buffett.jpg",
+      "companies": [
+        {
+          "name": "Berkshire Hathaway",
+          "value": 800000000000
+        }
+      ],
+      "residence": "Nebraska, USA"
+    },
+    {
+      "id": "bill_gates",
+      "name": "Bill", 
+      "surname": "Gates",
+      "age": 68,
+      "wealth": 122000000000,
+      "bio": "Co-founder of Microsoft, philanthropist through the Bill & Melinda Gates Foundation.",
+      "photo": "bill_gates.jpg",
+      "companies": [
+        {
+          "name": "Microsoft",
+          "value": 3000000000000
+        }
+      ],
+      "residence": "Washington, USA"
+    },
+    {
+      "id": "steve_ballmer",
+      "name": "Steve",
+      "surname": "Ballmer", 
+      "age": 67,
+      "wealth": 115000000000,
+      "bio": "Former CEO of Microsoft and owner of the LA Clippers basketball team.",
+      "photo": "steve_ballmer.jpg",
+      "companies": [
+        {
+          "name": "LA Clippers",
+          "value": 4000000000
+        }
+      ],
+      "residence": "Washington, USA"
     },
     {
       "id": "larry_page",
       "name": "Larry",
       "surname": "Page",
       "age": 50,
-      "wealth": 120000000000,
-      "bio": "Co-founder of Google and Alphabet Inc.",
+      "wealth": 112000000000,
+      "bio": "Co-founder of Google and board member of Alphabet Inc.",
       "photo": "larry_page.jpg",
       "companies": [
         {
           "name": "Alphabet",
-          "value": 1500000000000
+          "value": 1800000000000
         }
       ],
       "residence": "California, USA"
@@ -141,38 +145,38 @@
       "name": "Sergey",
       "surname": "Brin",
       "age": 50,
-      "wealth": 120000000000,
-      "bio": "Co-founder of Google and Alphabet Inc.",
+      "wealth": 107000000000,
+      "bio": "Co-founder of Google and board member of Alphabet Inc.",
       "photo": "sergey_brin.jpg",
       "companies": [
         {
           "name": "Alphabet",
-          "value": 1500000000000
+          "value": 1800000000000
         }
       ],
       "residence": "California, USA"
     },
     {
-      "id": "mukesh_ambani",
-      "name": "Mukesh",
-      "surname": "Ambani",
-      "age": 66,
-      "wealth": 100000000000,
-      "bio": "Chairman of Reliance Industries, India's most valuable company.",
-      "photo": "mukesh_ambani.jpg",
+      "id": "mark_zuckerberg",
+      "name": "Mark",
+      "surname": "Zuckerberg", 
+      "age": 39,
+      "wealth": 140000000000,
+      "bio": "Co-founder and CEO of Meta (formerly Facebook), pioneer in metaverse technology.",
+      "photo": "mark_zuckerberg.jpg",
       "companies": [
         {
-          "name": "Reliance Industries",
-          "value": 200000000000
+          "name": "Meta",
+          "value": 1100000000000
         }
       ],
-      "residence": "Mumbai, India"
+      "residence": "California, USA"
     }
   ],
   "products": [
     {
       "id": "ferrari_sf90",
-      "name": "Ferrari SF90 Stradale",
+      "name": "Ferrari SF90 Stradale", 
       "description": "Hybrid supercar with 1000 HP",
       "price": 625000
     },
@@ -288,6 +292,66 @@
       "name": "Premier League Football Club",
       "description": "Complete franchise ownership package",
       "price": 4500000000
+    },
+    {
+      "id": "moon_base",
+      "name": "Lunar Base Complex",
+      "description": "Private moon base with Earth observation deck",
+      "price": 850000000
+    },
+    {
+      "id": "quantum_computer",
+      "name": "Personal Quantum Supercomputer",
+      "description": "Next-gen quantum processing system",
+      "price": 150000000
+    },
+    {
+      "id": "ancient_city",
+      "name": "Lost Ancient City",
+      "description": "Recently discovered archaeological site with exclusive rights",
+      "price": 750000000
+    },
+    {
+      "id": "flying_car",
+      "name": "Prototype Flying Car",
+      "description": "First commercial flying vehicle with autopilot",
+      "price": 8500000
+    },
+    {
+      "id": "art_gallery",
+      "name": "Private Museum",
+      "description": "Custom-built gallery with rare art collection",
+      "price": 275000000
+    },
+    {
+      "id": "space_hotel",
+      "name": "Orbital Hotel Chain",
+      "description": "Network of luxury space hotels in Earth orbit",
+      "price": 12000000000
+    },
+    {
+      "id": "mars_colony",
+      "name": "Mars Colony Plot",
+      "description": "Prime real estate for future Mars settlement",
+      "price": 5000000000
+    },
+    {
+      "id": "time_machine",
+      "name": "Experimental Time Device",
+      "description": "Prototype quantum temporal displacement unit",
+      "price": 999999999
+    },
+    {
+      "id": "sky_palace",
+      "name": "Flying Palace",
+      "description": "Floating luxury residence with cloud-piercing spires",
+      "price": 750000000
+    },
+    {
+      "id": "immortality_pod",
+      "name": "Cryogenic Stasis Chamber",
+      "description": "Next-gen preservation system with revival guarantee",
+      "price": 250000000
     }
   ]
 }
